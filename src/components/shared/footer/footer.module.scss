@@ -1,0 +1,118 @@
+@import './../../../styles/abstracts/variables';
+@import './../../../styles/components/_buttons.scss';
+
+.footer {
+    font-size: 12px;
+
+    p {
+        margin: 5px 0;
+    }
+
+    .mailing-list-input-section {
+        margin-top: 10px;
+        position: relative;
+
+        .mailing-list-input {   
+            padding: 0 150px 0 20px;
+            height: 40px;
+            width: 100%;
+            border-radius: 20px;
+            border: 0;
+        }
+        .subscribe-button {
+            @extend .button-nav-primary;
+            position: absolute;
+            right: 0px;
+            width: 130px;
+            font-weight: 400;
+            border-radius: 20px;
+            height: 40px;
+            font-size: 13px;
+            text-transform: capitalize;
+        }
+    }
+
+
+    .footer-title {
+        color: $pf-nav-black;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .footer-section {
+        margin: 14px;
+    }
+
+    .footer-inner-section {
+        display: flex;
+        flex-direction: row;
+        .footer-sub-section {
+            margin-right: auto;
+        }
+    }
+
+    .footer-border {
+        background-color: $pf-pigeon-post;
+        color: $pf-tundora;
+        padding: 14px 14px 55px 14px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        &__contact-section {
+            .contact-section-need-help {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__social-links-section {
+            .social-media-icons {
+                position: relative;
+                .icon {
+                    margin-right: 10px;
+                }
+
+                .icon-discord {
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+    .footer-copyright {
+        height: 80px;
+        padding: 14px;
+        border-top: 2px solid $pf-pigeon-post;
+    }
+
+    .footer-copyright-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @media (min-width: 48em) {
+
+        .footer-inner-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-border {
+            // margin: 28px 28px 72px 28px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
+
+        .footer-copyright-flex {
+            display: flex;
+            padding: 0 5%;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+}

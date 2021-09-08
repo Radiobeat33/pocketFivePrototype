@@ -1,0 +1,91 @@
+name: Docker Node.js CI Features
+
+on: 
+  push:
+    branches:
+      - '**'
+    tags:
+      - '*.*'
+
+env:
+  ECR_REPOSITORY: 'nowhere'
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ECR_ACCESS_KEY_ID_DEV }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ECR_ACCESS_KEY_SECRET_DEV }}
+  AWS_REGION: us-east-1
+  IMAGE_TAG: latest
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: Setup Common Docker Environment
+        run: |
+          export REPONAME_LOWER=`echo ${GITHUB_REPOSITORY##*/} | awk '{print tolower($0)}'`
+          echo "ECR_REPOSITORY=p5-platform/$REPONAME_LOWER" >> $GITHUB_ENV 
+
+      - name: Setup Push Docker Environment
+        if: ${{ contains(github.ref, 'refs/tags/') }} 
+        run: |
+          echo "IMAGE_TAG=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Building application
+        run: npm run build --if-present
+
+      - run: npm test
+        env:
+          CI: true
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Create ECR repo if necessary
+        run: |
+          aws ecr describe-repositories --repository-names ${ECR_REPOSITORY} || aws ecr create-repository --repository-name ${ECR_REPOSITORY}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build Docker image
+        if: ${{ success() && env.ECR_REPOSITORY != 'nowhere' }}
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        run: docker build . -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
+      - name: Push Docker Image if tagged
+        if: ${{ success() && env.ECR_REPOSITORY != 'nowhere' && env.IMAGE_TAG != 'latest' }}
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        run: docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG

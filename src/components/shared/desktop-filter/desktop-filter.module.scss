@@ -1,0 +1,70 @@
+@import './../../../styles/abstracts/variables';
+
+.filter-container {
+  height: 40px;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: $pf-alto-light 1px solid;
+  margin: 10px 0;
+
+  .filter-options {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .filter-header {
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 500;
+      color: $pf-oxford-blue;
+      height: 20px;
+      margin: 5px 15px 5px 5px;
+    }
+
+    .filter-item {
+      background-color: $pf-subnav-backdrop;
+      border: $pf-active-gray 1px solid;
+      border-radius: 5px;
+      color: $pf-active-gray;
+      font-size: 16px;
+      height: 30px;
+      line-height: 19px;
+      padding: 5px 12px;
+      margin: 0 3px;
+      cursor: pointer;
+
+      &__active {
+        background-color: $pf-oxford-blue;
+        border: $pf-active-gray 1px solid;
+        border-radius: 5px;
+        color: $pf-subnav-backdrop;
+        font-size: 16px;
+        height: 30px;
+        line-height: 19px;
+        padding: 5px 12px;
+        margin: 0 3px;
+        cursor: pointer;
+      }
+    }
+    @media(min-width: 992px) {
+      .filter-item {
+        padding: 5px 16px;
+  
+        &__active {
+          padding: 5px 16px;
+        }
+      }
+    }
+
+  }
+}
+
+.filter-container-mobile-hide {
+  display: none;
+
+  @media(min-width: 768px) {
+    display: block;
+  }
+}
+

@@ -1,0 +1,350 @@
+@import './../../../styles/abstracts/variables';
+@import './../../../styles/components/_buttons.scss';
+
+.no-padding {
+    padding: 0;
+}
+
+.mobile-center {
+    text-align: center;
+}
+
+.step-container {
+    z-index: 0;
+}
+
+.create-offering-wording {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 50px 0 25px;
+    width: 100%;
+}
+
+.create-offering-description {
+    font-size: 12px;
+    margin-bottom: 27px;
+}
+
+.create-offering-step-1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 280px;
+    margin: 0 auto;
+
+    .create-offering-input-container {
+        margin: 15px 0;
+
+        #additional-info {
+            width: 252px;
+        }
+
+        .MuiOutlinedInput-root {
+            border-radius: 24px;
+        }
+
+        .create-offering-input .MuiOutlinedInput-root {
+            width: 280px;
+            height: 48px;
+            border-radius: 24px;
+        }
+
+        .create-offering-input .MuiInputLabel-formControl {
+            margin: 4px 0;
+        }
+
+        .date-picker-outline {
+            border: 1px solid $pf-input-grey;
+            width: 280px;
+            border-radius: 24px;
+            height: 48px;
+        }
+
+        .date-picker-outline .MuiTextField-root {
+            margin: 7px 15px;
+        }
+
+        .date-picker-outline .MuiIconButton-root {
+            margin-left: 50px;
+            padding: 0;
+        }
+
+        .date-picker-outline .MuiInput-underline::before {
+            border: none;
+        }
+
+        .date-picker-outline .MuiInput-underline::after {
+            border: none;
+        }
+    }
+}
+
+.offering-button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+
+    .offering-button-submit {
+        @extend .button-nav-primary;
+        font-size: 20px;
+        border-radius: 33px;
+        height: 66px;
+        width: 160px;
+        font-weight: 500;
+        margin: 40px 5px 5px 5px;
+    }
+    
+    .offering-button-cancel {
+        @extend .button-nav-primary;
+        color: $pf-dove-gray;
+        background-color: $pf-nav-white;
+        border: 2px solid $pf-dove-gray;
+        font-size: 20px;
+        border-radius: 33px;
+        height: 66px;
+        width: 160px;
+        font-weight: 500;
+        margin: 5px 5px 30px 5px;
+    }
+}
+
+.offering-list-container {
+    max-height: 600px;
+    width: 100%;
+    font-size: 14px;
+    color: $pf-bottom-nav;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    .offering-item-align {
+        text-align: center;
+        padding: 0;
+    }
+
+    .offering-item-mobile-content-center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sort-list-container {
+        height: 48px;
+        width: 100%;
+        max-width: 100%;
+        overflow-y: auto;
+        border-radius: 6px;
+        align-items: center;
+        justify-content: center;
+        background-color: $pf-pigeon-post;
+        .row-header {
+            color: $pf-oxford-blue;
+            height: 48px;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .separator {
+            padding: 0 5px;
+            border-right: 1px solid $pf-nav-white;
+        }
+    }
+
+    .offering-item-header {
+        font-weight: 500;
+        font-size: 16px;
+        color: $pf-nav-black;
+    }
+
+    .offering-list-item {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        margin: 7px 0;
+        background-color: $pf-nav-white;
+        
+        .offering-list-item-player-info {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 12px;
+            .player-picture {
+                height: 45px;
+                width: 45px;
+                border-radius: 10px;
+                margin-right: 5px;
+            }
+            .player-details {
+                margin-bottom: auto;
+            }
+        }
+
+        .offering-list-item-tournament-name-container,
+        .offering-list-item-buy-in-container {
+            margin-bottom: 12px;
+        }
+
+        .offering-list-item-buy-button-container {
+            display: flex;
+            justify-content: flex-end;
+
+            .sign-in-button {
+                @extend .button-nav-primary;
+                border-radius: 20px;
+                height: 40px;
+                width: 85px;
+                font-size: 16px;
+                font-weight: 500;
+              }
+        }
+    }
+
+    .offering-modal {
+        max-height: 400px;
+        max-width: auto;
+    
+        .no-padding {
+            padding: 0;
+        }
+
+        .buy-button {
+            @extend .button-nav-primary;
+            border-radius: 20px;
+            height: 40px;
+            width: 85px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .title-close-flex {
+            display: flex;
+            font-size: 20px;
+            .close-button {
+                align-self: flex-end;
+            }
+        }
+        
+        .header-sizing {
+            height: 53px;
+        }
+
+        .step-1-title {
+            background-color: $pf-pigeon-post;
+            color: $pf-oxford-blue;
+        }
+    
+        .step-2-title {
+            background-color: $pf-oxford-blue;
+            color: $pf-nav-white;
+        }
+    
+        .step-3-title {
+            background-color: $pf-success;
+            color: $pf-nav-white;
+        }
+
+        .offering-modal-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+}
+
+.offering-review-section-left,
+.offering-review-section-right {
+    width: 310px;
+    margin: 0 auto;
+}
+
+.offering-icon-container {
+    width: 100px;
+    height: 100px;
+
+    .offering-icon {
+        border-radius: 10px;
+    }
+}
+
+.offering-detail {
+    width: 160px;
+    height: 100px;
+}
+
+.offering-detail-title,
+.offering-card-title {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0 20px;
+}
+
+.offering-detail-center {
+    text-align: center;
+}
+
+.offering-detail-title-description {
+    font-size: 12px;
+    font-weight: 500;
+    color: $pf-bottom-nav;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.offering-detail-header {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.offering-detail-handle {
+    color: $pf-bottom-nav;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.offering-details-description {
+    color: $pf-bottom-nav;
+    font-size: 16px;
+    margin: 14px 0;
+    text-align: center;
+}
+
+.margin-bottom-14 {
+    margin-bottom: 14px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+@media (min-width: 62em) {
+
+    .mobile-center {
+        text-align: left;
+    }
+
+    .create-offering-step-1 {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin: 0 60px;
+    }
+
+    .offering-review-section-left {
+        width: 310px;
+        margin: 0 0 0 auto;
+    }
+
+    .offering-review-section-right {
+        width: 310px;
+        margin: 0 auto 0 0;
+    }
+
+}

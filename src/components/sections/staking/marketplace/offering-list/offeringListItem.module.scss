@@ -1,0 +1,419 @@
+@import './../../../../../styles/abstracts/variables';
+@import './../../../../../styles/components/_buttons.scss';
+
+.offering-list-container {
+    max-height: 600px;
+    width: 100%;
+    font-size: 14px;
+    color: $pf-bottom-nav;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    .desktop-view-hide {
+        display: block;
+    }
+
+    .mobile-view-hide {
+        display: none;
+    }
+
+    .offering-item-align {
+        text-align: center;
+        padding: 0;
+    }
+
+    .offering-item-no-padding {
+        padding: 0 5px;
+    }
+
+    .offering-item-desktop-right {
+        text-align: right;
+    }
+
+    .offering-item-desktop-left {
+        text-align: left;
+    }
+
+    .offering-item-center {
+        text-align: center;
+    }
+
+    .offering-item-mobile-left {
+        text-align: left;
+        padding: 0;
+    }
+
+    .offering-item-mobile-right {
+        text-align: right;
+        padding: 0;
+    }
+
+    .offering-margin-top {
+        margin-top: 20px;
+    }
+
+    .offering-desc-width {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .buying-input-section {
+        margin-top: 10px;
+    }
+
+    .offering-modal-container {
+        display: flex;
+        justify-content: flex-start;
+        .modal-player-picture {
+            float: left;
+            border-radius: 10px;
+            margin: 0 5px 10px 0;
+            height: 95px;
+        }
+
+        .modal-player-purchase-picture {
+            border-radius: 10px;
+            margin: 0 5px 10px 0;
+            height: 95px;
+        }
+
+        .modal-item-header {
+            font-weight: 500;
+            font-size: 18px;
+            color: $pf-nav-black;
+        }
+
+        .modal-item-small-header {
+            font-weight: 500;
+            font-size: 14px;
+            color: $pf-nav-black;
+        }
+
+        .modal-item-handle {
+            font-weight: 500;
+            font-size: 16px;
+            color: $pf-bottom-nav;
+            margin-bottom: 5px;
+        }
+
+        .modal-badge {
+            height: 25px;
+        }
+
+        .modal-align-center {
+            text-align: center;
+        }
+
+        .modal-header-margin {
+            margin-top: 30px;
+        }
+
+        .modal-purchase-header-margin {
+            margin-top: 10px;
+        }
+
+        .modal-purchase-percent {
+            margin-bottom: 10px;
+        }
+    }
+
+    .sort-list-container {
+        height: 48px;
+        width: 100%;
+        max-width: 100%;
+        overflow-y: auto;
+        border-radius: 6px;
+        align-items: center;
+        justify-content: center;
+        background-color: $pf-pigeon-post;
+        .row-header {
+            color: $pf-oxford-blue;
+            height: 48px;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .separator {
+            padding: 0 5px;
+            border-right: 1px solid $pf-nav-white;
+        }
+    }
+
+    .offering-item-header {
+        font-weight: 500;
+        font-size: 16px;
+        color: $pf-nav-black;
+    }
+
+    .offering-list-item {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        margin: 7px 0;
+        background-color: $pf-nav-white;
+        
+        .offering-list-item-player-info {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 12px;
+            .player-picture {
+                height: 45px;
+                width: 45px;
+                border-radius: 10px;
+                margin-right: 5px;
+            }
+            .player-details {
+                margin-bottom: auto;
+            }
+        }
+
+        .offering-list-item-tournament-name-container,
+        .offering-list-item-buy-in-container {
+            margin-bottom: 12px;
+        }
+
+        .offering-list-item-buy-button-container {
+            display: flex;
+            justify-content: flex-end;
+
+            .sign-in-button {
+                @extend .button-nav-primary;
+                border-radius: 20px;
+                height: 40px;
+                width: 85px;
+                font-size: 16px;
+                font-weight: 500;
+              }
+        }
+    }
+
+    .offering-modal {
+        max-height: 400px;
+        max-width: auto;
+    
+        .no-padding {
+            padding: 0;
+        }
+
+        .offering-input {
+            font-size: 14px;
+            margin-bottom: 14px;
+            padding: 0 20px;
+            height: 40px;
+            width: 150px;
+            border-radius: 20px;
+            border: 1px $pf-bottom-nav solid;
+        }
+
+        .buy-button {
+            @extend .button-nav-primary;
+            border-radius: 20px;
+            height: 40px;
+            width: 150px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .back-button {
+            @extend .button-nav-secondary;
+            border-radius: 20px;
+            height: 40px;
+            width: 150px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .success-check {
+            font-size: 100px;
+            color: $pf-success;
+        } 
+
+        .margin-top-10 {
+            margin-top: 10px;
+        }
+
+        .margin-top-20 {
+            margin-top: 20px;
+        }
+
+        .margin-top-30 {
+            margin-top: 30px;
+        }
+
+        .margin-top-50 {
+            margin-top: 50px;
+        }
+
+        .title-close-flex {
+            display: flex;
+            font-size: 20px;
+            .close-button {
+                align-self: flex-end;
+            }
+        }
+        
+        .header-sizing {
+            height: 53px;
+        }
+
+        .step-1-title {
+            background-color: $pf-pigeon-post;
+            color: $pf-oxford-blue;
+        }
+    
+        .step-2-title {
+            background-color: $pf-oxford-blue;
+            color: $pf-nav-white;
+        }
+    
+        .step-3-title {
+            background-color: $pf-success;
+            color: $pf-nav-white;
+        }
+
+        .offering-modal-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    @media(min-width: 768px) {
+
+        .offering-item-header {
+            font-weight: 500;
+            font-size: 12px;
+            color: $pf-nav-black;
+        }
+
+        .desktop-view-hide {
+            display: none;
+        }
+
+        .mobile-view-hide {
+            display: block;
+        }
+
+        .offering-list-container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+
+            .offering-list-item {
+                font-size: 12px;
+                width: 100%;
+                height: 90px;
+                margin: 6px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+
+                .offering-item-wrapper {
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 0;
+                }
+
+                .offering-list-item-player-info {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 0;
+                    .player-picture {
+                        height: 70px;
+                        width: 70px;
+                        border-radius: 10px;
+                        margin-right: 5px;
+                    }
+                    .player-details {
+                        margin-bottom: auto;
+                    }
+                }
+
+                .offering-item-wrapper-tourney-width {
+                    max-width: 70%;
+                }
+
+                .offering-item-wrapper-purchase-width {
+                    max-width: 300px;
+                    margin: 20px 0;
+                }
+
+                .offering-item-description {
+                    margin: 10px 0;
+                }
+    
+                .offering-list-item-tournament-name-container {
+                    margin: 0;
+                }
+    
+                .offering-list-item-buy-in-container {
+                    text-align: center;
+                    margin: 0;
+                }
+    
+                .offering-list-item-markup-container,
+                .offering-list-item-available-container,
+                .offering-list-item-start-time-container {
+                    text-align: center;
+                }
+    
+                .offering-list-item-buy-button-container {
+                    padding-right: 0;
+                }  
+            }
+        }
+
+        .offering-item-padding {
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .offering-item-align {
+            text-align: inherit;
+            padding: 0 3px;
+        }
+
+        .offering-item-margin-align {
+            margin: 0 auto;
+        }
+
+        .offering-item-mobile-left,
+        .offering-item-mobile-right {
+            text-align: inherit;
+        }
+
+    }
+
+    @media(min-width: 992em) {
+
+        .offering-item-header {
+            font-size: 16px;
+        }
+
+        .offering-item-padding {
+            padding: 0;
+            font-size: 15px;
+        }
+
+
+    }
+}
+
+.modal-player-details {
+    margin-left: 25px;
+}
+
+.container::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}

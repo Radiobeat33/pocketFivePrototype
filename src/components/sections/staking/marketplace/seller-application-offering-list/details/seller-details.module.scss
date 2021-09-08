@@ -1,0 +1,353 @@
+@import './../../../../../../styles/abstracts/variables';
+@import './../../../../../../styles/components/_buttons.scss';
+
+.seller-offering-list {
+    margin: 10px 15px;
+}
+
+.seller-desktop-view-hide {
+    display: block;
+}
+
+.seller-mobile-view-hide {
+    display: none;
+}
+
+.detail-overview-section {
+    text-align: center;
+    margin: 30px auto 50px;
+
+    .tournament-location {
+        margin-bottom: 20px;
+    }
+
+    .tournament-details {
+        width: 290px;
+        margin: 0 auto 40px;
+    }
+
+    .start-time-section {
+        margin-bottom: 10px;
+    }
+
+    .available-section {
+        margin-top: 10px;
+    }
+
+    .mailing-list-input {
+        font-size: 14px;
+        margin-top: 30px;
+        padding: 0 20px;
+        height: 40px;
+        width: 200px;
+        border-radius: 20px;
+        border: 0;
+    }
+}
+
+.seller-offering-item-header {
+    font-weight: 500;
+    font-size: 16px;
+    color: $pf-nav-black;
+}
+
+.seller-offering-item-subheader {
+    font-weight: 500;
+    font-size: 16px;
+    color: $pf-active-gray;
+}
+
+.seller-offering-item-description {
+    font-size: 14px;
+    color: $pf-active-gray;
+}
+
+.seller-offering-item-status-header {
+    font-weight: 500;
+    font-size: 17px;
+    color: $pf-nav-black;
+    margin: 9px 0;
+}
+
+.seller-offering-list-container {
+    max-height: 600px;
+    width: 100%;
+    font-size: 14px;
+    color: $pf-bottom-nav;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    .seller-offering-item-align {
+        text-align: center;
+        padding: 0;
+    }
+
+    .seller-offering-item-mobile-left {
+        text-align: left;
+        padding: 0;
+    }
+
+    .seller-offering-item-mobile-right {
+        text-align: right;
+        padding: 0;
+    }
+
+    .seller-sort-list-container {
+        height: 48px;
+        width: 100%;
+        max-width: 100%;
+        overflow-y: auto;
+        border-radius: 6px;
+        align-items: center;
+        justify-content: center;
+        background-color: $pf-pigeon-post;
+        .seller-row-header {
+            color: $pf-oxford-blue;
+            height: 48px;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .seller-separator {
+            padding: 0 5px;
+            border-right: 1px solid $pf-nav-white;
+        }
+    }
+
+    .seller-offering-list-item {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        margin: 7px 0;
+        background-color: $pf-nav-white;
+        
+        .seller-offering-list-item-player-info {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 12px;
+            .seller-player-picture {
+                height: 45px;
+                width: 45px;
+                border-radius: 10px;
+                margin-right: 5px;
+            }
+            .seller-player-details {
+                margin-bottom: auto;
+            }
+        }
+
+        .seller-offering-list-item-tournament-name-container,
+        .seller-offering-list-item-buy-in-container {
+            margin-bottom: 12px;
+        }
+
+        .seller-offering-list-item-buy-button-container {
+            display: flex;
+            justify-content: flex-end;
+
+            .seller-sign-in-button {
+                @extend .button-nav-primary;
+                border-radius: 20px;
+                height: 40px;
+                width: 85px;
+                font-size: 16px;
+                font-weight: 500;
+              }
+        }
+    }
+
+    .seller-offering-modal {
+        max-height: 400px;
+        max-width: auto;
+    
+        .seller-no-padding {
+            padding: 0;
+        }
+
+        .seller-buy-button {
+            @extend .button-nav-primary;
+            border-radius: 20px;
+            height: 40px;
+            width: 85px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .seller-title-close-flex {
+            display: flex;
+            font-size: 20px;
+            .close-button {
+                align-self: flex-end;
+            }
+        }
+        
+        .seller-header-sizing {
+            height: 53px;
+        }
+
+        .seller-step-1-title {
+            background-color: $pf-pigeon-post;
+            color: $pf-oxford-blue;
+        }
+    
+        .seller-step-2-title {
+            background-color: $pf-oxford-blue;
+            color: $pf-nav-white;
+        }
+    
+        .seller-step-3-title {
+            background-color: $pf-success;
+            color: $pf-nav-white;
+        }
+
+        .seller-offering-modal-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    @media(min-width: 768px) {
+
+        .markup-section {
+            margin-bottom: 10px;
+        }
+
+        .available-section {
+            margin-top: 10px;
+        }
+
+        .start-time-section {
+            margin-top: 10px;
+        }
+
+        .detail-overview-section {
+            text-align: left;
+            margin: 50px auto 80px;
+        }
+
+        .seller-offering-detail-header,
+        .seller-offering-detail-status-header {
+            font-weight: 500;
+            font-size: 12px;
+            color: $pf-nav-black;
+        }
+
+        .seller-desktop-view-hide {
+            display: none;
+        }
+
+        .seller-mobile-view-hide {
+            display: block;
+        }
+
+        .seller-offering-list-container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+
+            .seller-offering-list-item {
+                font-size: 12px;
+                width: 100%;
+                height: 90px;
+                margin: 6px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+
+                .seller-offering-item-wrapper {
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 0;
+                }
+
+                .seller-offering-item-wrapper-tourney-width {
+                    max-width: 70%;
+                }
+
+                .seller-offering-list-item-player-info {
+                    align-items: center;
+                    margin-bottom: 0;
+                    .seller-player-picture {
+                        height: 70px;
+                        width: 70px;
+                    }
+                }
+    
+                .seller-offering-list-item-tournament-name-container {
+                    margin: 0;
+                }
+    
+                .seller-offering-list-item-buy-in-container {
+                    text-align: center;
+                    margin: 0;
+                }
+    
+                .seller-offering-list-item-markup-container,
+                .seller-offering-list-item-available-container,
+                .seller-offering-list-item-start-time-container {
+                    text-align: center;
+                }
+    
+                .seller-offering-list-item-buy-button-container {
+                    padding-right: 0;
+                }  
+            }
+        }
+
+        .seller-offering-item-padding {
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .seller-offering-item-align {
+            text-align: inherit;
+            padding: 0 3px;
+        }
+
+        .seller-offering-item-margin-align {
+            margin: 0 auto;
+        }
+
+        .seller-offering-item-mobile-left,
+        .seller-offering-item-mobile-right {
+            text-align: inherit;
+        }
+    }
+
+    @media(min-width: 992em) {
+
+        .seller-offering-item-header,
+        .seller-offering-item-status-header {
+            font-size: 16px;
+        }
+
+        .seller-offering-item-padding {
+            padding: 0;
+            font-size: 15px;
+        }
+    }
+}
+
+
+@media(min-width: 768px) {
+
+    .seller-desktop-view-hide {
+        display: none;
+    }
+
+    .seller-mobile-view-hide {
+        display: block;
+    }
+}
+.container::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}

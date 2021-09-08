@@ -1,0 +1,30 @@
+@import './../../../../styles/abstracts/variables';
+
+.secondary-nav {
+    display: none;
+    height: 40px;
+    background-color: $pf-pigeon-post;
+
+    .secondary-nav-group {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .secondary-nav-item {
+        margin: 0 10px;
+        font-size: 14px;
+        color: $pf-oxford-blue;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    @media (min-width: 48em) {
+        display: block;
+    }
+
+    @media (min-width: 62em) {
+        .secondary-nav-item {
+            margin: 0 25px;
+        }
+    }
+}

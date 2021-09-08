@@ -1,0 +1,273 @@
+@import './../../../styles/abstracts/variables';
+
+.join-sign-in-modal,
+.onboarding-modal {
+    max-height: 400px;
+    max-width: auto;
+
+    .no-padding {
+        padding: 0;
+    }
+
+    .join-sign-in-column-padding,
+    .onboarding-modal-column-padding {
+        padding: 20px;
+    }
+
+    .close-button-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+
+    .close-button-container-onboarding {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .close-button {
+        color: $pf-flush-mahogany;
+    }
+
+    .p5-logo-container {
+        margin-top: 20px;
+    }
+
+    .p5-bitmap-container {
+        margin-bottom: 20px;
+    }
+
+    .p5-logo {
+        height: 66px;
+        width: 204px;
+        margin-left: 25px;
+    }
+
+    .p5-bitmap {
+        height: 100%;
+    }
+
+    .mobile-center {
+        text-align: center;
+    }
+
+    .create-account-wording,
+    .signin-wording {
+        width: 280px;
+        height: 50px;
+        font-size: 22px;
+        font-weight: 500;
+        margin: 60px auto 20px;
+    }
+
+    .facebook-sign-in {
+        margin: 12px auto 4px;
+        border: 1px solid $pf-facebook-blue;
+        color: $pf-facebook-blue;
+        width: 280px;
+        border-radius: 20px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .facebook-sign-in-icon {
+            height: 26px;
+            width: 26px;
+            margin-right: 10px;
+        }
+    }
+
+    .create-account-step-1,
+    .signin-step-1,
+    .onboarding-modal-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .create-account-input-container,
+        .signin-input-container {
+            margin: 16px 0;
+
+            .create-account-input .MuiOutlinedInput-root,
+            .signin-input .MuiOutlinedInput-root {
+                width: 280px;
+                border-radius: 20px;
+            }
+
+            .create-account-input .MuiInputLabel-root,
+            .signin-input .MuiInputLabel-root {
+                top: -7px;
+            }
+
+            .create-account-input .MuiInputLabel-formControl,
+            .signin-input .MuiInputLabel-formControl {
+                margin: 8px 0;
+            }
+        }
+
+        .proceed-button-container {
+            margin: 22px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .proceed-button {
+                height: 66px;
+                width: 66px;
+                border-radius: 50%;
+                float: right;
+                background-color: $pf-flush-mahogany;
+                color: $pf-nav-white;
+            }
+        }
+
+    }
+
+    .onboarding-modal-container-padding {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .create-account-step-2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        font-size: 14px;
+
+        .verify-email-wording {
+            margin-top: 60px;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .email-sent-wording {
+            margin: 18px 0;
+        }
+
+        .current-email,
+        .contact-us-link {
+            font-weight: 500;
+        }
+
+        .cannot-find-email-container,
+        .just-click-wording,
+        .contact-us-container {
+            margin: 32px 0;
+            text-align: center;
+        }
+
+        .resend-email-button {
+            margin-top: 32px;
+            border-radius: 24px;
+            height: 48px;
+            width: 240px;
+            background-color: $pf-flush-mahogany;
+            color: $pf-nav-white;
+            text-transform: capitalize;
+            font-weight: 400;
+        }
+
+        .contact-us-link {
+            text-decoration: underline;
+        }
+    }
+
+    .switch-to-sign-in {
+        color: $pf-dusty-gray;
+        margin-left: 10px;
+        font-size: 10px;
+        font-weight: 500;
+
+        .sign-in-link {
+            color: $pf-nav-black;
+        }
+    }
+
+    .onboarding-title {
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: -1.45px;
+        margin-top: 15px;
+    }
+
+    .choose-desination-wording {
+        font-size: 20px;
+        margin: 30px auto 70px;
+    }
+
+    .onboarding-links-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin: 30px auto;
+        
+        
+        .trophy-icon,
+        .buy-icon,
+        .money-icon {
+            height: 85px;
+        }
+        
+        .link-header {
+            font-size: 20px;
+            letter-spacing: -0.73px;
+            font-weight: 500;
+            color: $pf-flush-mahogany;
+            margin: 14px auto;
+        }
+
+        .link-description {
+            font-size: 10px;
+            letter-spacing: -0.36px;
+            width: 70%;
+        }
+    }
+
+    input[type=checkbox]:checked {
+        color: $pf-flush-mahogany;
+    }
+
+    .right-column-image {
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+
+    @media (min-width: 62em) {
+        max-height: 400px;
+        max-width: 900px;
+
+
+        .onboarding-links-container {
+            margin: 0;
+        }
+        
+        .close-button-container {
+            margin-right: 0;
+        }
+
+        .mobile-center {
+            text-align: left;
+        }
+
+        .p5-logo {
+            margin-left: 25px;
+        }
+
+        .p5-logo-container {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .switch-to-sign-in {
+            margin: 20px 40px;
+        }
+    }
+}

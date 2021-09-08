@@ -1,0 +1,114 @@
+@import './../../../../styles/components/_buttons.scss';
+
+.top-nav {
+    height: 1.875em;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 6px;
+    background-color: $pf-nav-white;
+    position: inherit;
+
+    .mobile-menu {
+        display: inline-block;
+        margin-right: auto;
+        width: 125px;
+    }
+
+    .logo {
+        .logo-mobile {
+            display: inline-block;
+        }
+
+        .logo-desktop {
+            display: none;
+        }
+    }
+
+    .navigation-section,
+    .search {
+        display: none;
+    }
+
+    .navigation-buttons { 
+        margin-left: auto;
+        width: 125px;
+    }
+
+    .sign-up-button {
+        @extend .button-nav-secondary;
+        @extend .button-nav-small;
+    }
+
+    .join-button {
+        @extend .button-nav-primary;
+        @extend .button-nav-small;
+    }
+
+    @media (min-width: 48em) {
+        height: 3.75em;
+        padding: 8px;
+        background-color: transparent;
+        border-bottom: none;
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .logo {
+
+            .logo-mobile {
+                display: none;
+            }
+    
+            .logo-desktop {
+                display: inline-block;
+                height: 30px;
+            }
+        }
+
+        .navigation-section,
+        .search {
+            display: flex;
+        }
+
+        .navigation-item {
+            margin-left: 20px;
+            height: 24px;
+            color: $pf-oxford-blue;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1.63px;
+            line-height: 24px;
+        }
+
+        .search {
+            margin-left: auto;
+        }
+
+        .navigation-buttons {
+            margin-left: 0px;
+            width: auto;
+        }
+
+        .sign-up-button,
+        .join-button {
+            border-radius: 20px;
+            height: 40px;
+            width: 102px;
+            margin-left: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1.03px;
+            line-height: 19px;
+            text-transform: capitalize;
+        }
+
+    }
+
+    @media (min-width: 62em) {        
+        .navigation-item {
+            font-size: 20px;
+        }
+    }
+}

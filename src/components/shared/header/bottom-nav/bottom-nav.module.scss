@@ -1,0 +1,44 @@
+@import './../../../../styles/abstracts/variables';
+
+.bottom-nav {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 6px;
+    position: inherit;
+    background-color: $pf-bottom-nav;
+
+    .secondary-nav-group {
+        padding: 10px 0;
+        text-align: left;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .secondary-nav-item {
+        margin: 0 20px;
+        font-size: 14px;
+        color: $pf-nav-white;
+        cursor: pointer;
+    }
+
+    .secondary-nav-item-section {
+        font-size: 16px;
+        text-transform: capitalize;
+        padding: 0 20px;
+        border-right: 1px solid $pf-corn;
+        color: $pf-nav-white;
+        cursor: pointer;
+    }
+
+    .active {
+        color: $pf-corn;
+    }
+
+    &__hide {
+        display: none;
+    }
+ 
+}

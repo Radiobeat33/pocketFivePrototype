@@ -1,0 +1,39 @@
+@import './../../../../../styles/abstracts/variables';
+@import './../../../../../styles/components/_buttons.scss';
+
+.marketplace-filter-sort {
+    display: none;
+}
+
+.marketplace-filter-container {
+    height: 40px;
+    width: 100%;
+    border-color: $pf-alto-light;
+    border-bottom: 1px;
+    display: flex;
+    flex-wrap: warp;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.marketplace-filter-sections {
+    height: 30px;
+    width: 100%;
+    border: 1px solid $pf-active-gray;
+    border-radius: 5px;
+}
+
+.marketplace-filter-section-container {
+    width: 100%;
+}
+
+// .marketplace-sort-container {
+
+// }
+
+@media(min-width: 768px) {
+    .marketplace-filter-sort {
+        display: block;
+    }
+}

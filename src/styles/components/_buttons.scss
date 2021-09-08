@@ -1,0 +1,23 @@
+@import './../abstracts/variables';
+
+.button-nav-primary {
+    color: $pf-nav-white;
+    background-color: $pf-flush-mahogany;
+    text-transform: capitalize;
+}
+
+.button-nav-secondary {
+    color: $pf-flush-mahogany;
+    text-transform: capitalize;
+}
+
+.button-nav-small {
+    border-radius: 20px;
+    height: 36px;
+    width: 48px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.64px;
+    line-height: 11px;
+    margin-left: 10px;
+}

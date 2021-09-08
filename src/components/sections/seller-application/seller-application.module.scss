@@ -1,0 +1,203 @@
+@import './../../../styles/abstracts/variables';
+@import './../../../styles/components/_buttons.scss';
+
+.no-padding {
+    padding: 0;
+}
+
+.step-container {
+    z-index: 0;
+}
+
+.seller-illustration-1,
+.seller-illustration-2,
+.seller-illustration-3,
+.seller-illustration-4,
+.seller-illustration-5,
+.seller-illustration-6 {
+    margin: 0;
+}
+
+.seller-description-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    .seller-application-wording {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 50px 0 10px;
+    }
+    
+    .seller-application-description {
+        font-size: 15px;
+        margin-bottom: 27px;
+        font-weight: 600;
+        color: $pf-dove-gray;
+        text-align: center;
+    }
+}
+
+.seller-application-step-1,
+.seller-application-step-2,
+.seller-application-step-3,
+.seller-application-step-4,
+.seller-application-step-5,
+.seller-application-step-6 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    .current-step-header-1,
+    .current-step-header-2,
+    .current-step-header-3,
+    .current-step-header-4,
+    .current-step-header-5,
+    .current-step-header-6 {
+        font-size: 12px;
+        font-weight: 600;
+        margin: 15px 0;
+
+        .current-step-header-icon {
+            margin-left: 10px;
+        }
+    }
+
+    .final-step-header {
+        color: $pf-success;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .info-container-3,
+    .info-container-4,
+    .info-container-5 {
+        background-color: $pf-oxford-blue;
+        color: $pf-nav-white;
+        width: 280px;
+        border-radius: 14px;
+        padding: 10px;
+        margin: 5px 0 15px;
+
+        .info-wording {
+            font-size: 10px;
+        }
+    }
+
+    .seller-application-input-override {
+        margin: 10px 0 !important;
+    }
+
+    .seller-application-input-container-1,
+    .seller-application-input-container-2,
+    .seller-application-input-container-3,
+    .seller-application-input-container-4,
+    .seller-application-input-container-5 {
+        margin: 5px 0;
+
+        #additional-info {
+            width: 252px;
+        }
+
+        .MuiOutlinedInput-root {
+            border-radius: 24px;
+        }
+
+        .seller-application-input .MuiOutlinedInput-root {
+            width: 280px;
+            height: 48px;
+            border-radius: 24px;
+        }
+
+        .seller-application-input .MuiInputLabel-formControl {
+            margin: 4px 0;
+        }
+
+        .date-picker-outline {
+            border: 1px solid $pf-input-grey;
+            width: 280px;
+            border-radius: 24px;
+            height: 48px;
+        }
+
+        .date-picker-outline .MuiTextField-root {
+            margin: 7px 15px;
+        }
+
+        .date-picker-outline .MuiIconButton-root {
+            margin-left: 50px;
+            padding: 0;
+        }
+
+        .date-picker-outline .MuiInput-underline::before {
+            border: none;
+        }
+
+        .date-picker-outline .MuiInput-underline::after {
+            border: none;
+        }
+    }
+}
+
+.offering-button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+
+    .offering-button-submit {
+        @extend .button-nav-primary;
+        font-size: 20px;
+        border-radius: 33px;
+        height: 66px;
+        width: 160px;
+        font-weight: 500;
+        margin: 40px 5px 5px 5px;
+    }
+    
+    .offering-button-cancel {
+        @extend .button-nav-primary;
+        color: $pf-dove-gray;
+        background-color: $pf-nav-white;
+        border: 2px solid $pf-dove-gray;
+        font-size: 20px;
+        border-radius: 33px;
+        height: 66px;
+        width: 160px;
+        font-weight: 500;
+        margin: 5px 5px 30px 5px;
+    }
+
+    .offering-button-close {
+        @extend .button-nav-primary;
+        font-size: 20px;
+        border-radius: 33px;
+        height: 66px;
+        width: 160px;
+        font-weight: 500;
+        margin: 30px 5px;
+    }
+}
+
+
+@media (min-width: 48em) {
+
+    .seller-application-step-1,
+    .seller-application-step-2,
+    .seller-application-step-3,
+    .seller-application-step-4,
+    .seller-application-step-5,
+    .seller-application-step-6 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}

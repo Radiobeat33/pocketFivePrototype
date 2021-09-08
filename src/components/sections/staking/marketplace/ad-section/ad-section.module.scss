@@ -1,0 +1,21 @@
+@import './../../../../../styles/abstracts/variables';
+@import './../../../../../styles/components/_buttons.scss';
+
+.ad-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 114px;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px dotted $pf-nav-black;
+    margin-bottom: 14px;
+}
+
+@media(min-width: 768px) {
+    .ad-container {
+        height: 195px;
+        margin-bottom: 30px;
+    }
+}
+

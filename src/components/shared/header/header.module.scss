@@ -1,0 +1,25 @@
+@import './../../../styles/abstracts/variables';
+
+.header {
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    @media(min-width: 768px) {
+        
+        .mobile {
+            display: none;
+        }
+    
+        .desktop {
+            display: block;
+            .desktop-border {
+                border-bottom: 1px $pf-flush-mahogany solid;
+            }
+        }
+    }
+}
